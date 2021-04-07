@@ -8,8 +8,18 @@ bool evenNumber(int num) {
     } return false;
 }
 
+bool evenNumberBits(int num) {
+    if (num & 1) {
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+
 int main() {
-    cout << evenNumber(2) << endl;
+    cout << evenNumber(3) << endl;
+    cout << evenNumberBits(3) << endl;
 
 }
 
