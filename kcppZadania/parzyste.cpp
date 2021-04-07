@@ -11,10 +11,7 @@ bool evenNumber(int num) {
 bool evenNumberBits(int num) {
     if (num & 1) {
         return false;
-    }
-    else {
-        return true;
-    }
+    } return true;
 }
 
 int main() {
