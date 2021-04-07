@@ -14,9 +14,14 @@ bool evenNumberBits(int num) {
     } return true;
 }
 
+bool evenNumberOtherWay(int num) {
+    return num % 2 == 0 ? true : false;
+}
+
 int main() {
-    cout << evenNumber(3) << endl;
-    cout << evenNumberBits(3) << endl;
+    cout << evenNumber(4) << endl;
+    cout << evenNumberBits(4) << endl;
+    cout << evenNumberOtherWay(4) << endl;
 
 }
 
