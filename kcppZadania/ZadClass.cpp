@@ -3,42 +3,71 @@
 
 using namespace std;
 
-class Samochod {
-    private:
-        string kolor;
-        string model;
-        string marka;
 
+
+class Math {
     public:
-        string pobierzKolor() {
-            return kolor;
+        Math() {};
+
+    int add(int a, int b);
+    int substract(int a, int b);
+
+};
+
+int Math::add(int a, int b) {
+    return a + b;
+}
+
+int Math::substract(int a, int b) {
+    return a - b;
+}
+
+class Mathv2 {
+    public:
+        Mathv2() {};
+
+    int add(int a, int b) {
+        return a + b;
+    }
+    int substract(int a, int b) {
+        return a - b;
+    }
+};
+
+class Person {
+    private:
+        string firstName;
+        string lastName;
+    public:
+        Person(string _firstName, string _lastName) {
+            firstName = _firstName;
+            lastName = _lastName;
         }
-        string pobierzModel() {
-            return model;
+        string getFirstName() {
+            return firstName;
         }
-        string pobierzMarke() {
-            return marka;
+
+        string getLastName(){
+            return lastName;
         }
-        void ustawKolor(string _kolor) {
-            kolor = _kolor;
-        }
-        void ustawModel(string _model) {
-            model = _model;
-        }
-        void ustawMarke(string _marka) {
-            kolor = _marka;
-        }
-        Samochod(string _kolor, string _model, string _marka) {
-            kolor = _kolor;
-            model = _model;
-            marka = _marka;
+
+        void info() {
+            cout << "First name: " << getFirstName() << endl;
+            cout << "Last name: " << getLastName() << endl;
         }
 };
 
-
 int main() {
-    Samochod s = Samochod("black", "M5", "BMW");
-    cout << s.pobierzMarke();
+    Math math = Math();
+    cout << math.add(5, 5) << endl;
+    cout << math.substract(5, 5) << endl;
+    Mathv2 mathv2 = Mathv2();
+    cout << mathv2.add(5, 5) << endl;
+    cout << mathv2.substract(5, 5) << endl;
+
+    Person person = Person("Michal", "Malek");
+    person.info();
+
+
+    return 0;
 }
-
-
